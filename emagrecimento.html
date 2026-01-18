@@ -78,11 +78,21 @@
         <input type="number" id="peso" placeholder="Seu peso (kg)">
         <input type="number" id="altura" placeholder="Sua altura (cm)">
 
-        <button onclick="abrirIA()">Emagrecimento Inteligente</button>
+        <button onclick="analisar()">Analisar</button>
+
+
+
+        fetch("https://stefiny-fit-1.onrender.com/ia", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mensagem })
+        });
+
+
 
         <script>
             function abrirIA() {
-                window.location.href = "ia-emagrecimento.html";
+                window.location.href = "https://stefiny-fit-1.onrender.com/ia";
             }
         </script>
         <h2>🤖 IA de Emagrecimento</h2>
